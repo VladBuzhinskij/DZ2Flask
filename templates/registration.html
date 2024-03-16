@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block content %}
+            <div class="regmenu">
+                <form action="/submit" method="post">
+                    <h2>Введите данные</h2>
+                    <input type="text" name="name" value="Имя">
+                    <input type="email" name="email" value="Почта">
+                    <input type="submit" value="Отправить">
+                </form>
+
+            </div>
+
+{% endblock  content %}

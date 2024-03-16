@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body>
+    
+    <div class="menu">
+        <form action="/">
+            <button>
+                <h2>Главная</h2>
+            </button>
+        </form>
+       
+        <form action="/info">
+            <button>
+                <h2>О нас</h2>
+            </button>
+        </form>
+        <form action="/contacts">
+            <button>
+                <h2>Контакты</h2>
+            </button>
+        </form>
+        
+        {% if registration == 1: %}
+            <form action="/exit">
+                <button>
+                    <h2>Выйти</h2>
+                </button>
+            </form>
+        {% else %}
+            <form action="/registration">
+                <button>
+                    <h2>Войти</h2>
+                </button>
+            </form>
+        {% endif %}
+            
+        
+        
+
+
+    </div>
+    <div class="container">
+        <div class="blockcategory">
+            <form action="">
+                <button>
+                    Женская Одежда
+                </button>
+            </form>
+        
+            <form action="">
+                <button>
+                    Женская Обувь
+                </button>
+            </form>
+            <form action="">
+                <button>
+                    Мужская Одежда
+                </button>
+            </form>
+            <form action="">
+                <button>
+                    Мужская Обувь 
+                </button>
+            </form>
+            <form action="">
+                <button>
+                    Аксесуры 
+                </button>
+            </form>
+
+
+        </div>
+
+        <div>
+
+            {% block content %}
+                <h2>Магазин</h2>
+    
+            {% endblock  content %}
+        </div>
+    </div>    
+
+
+    <footer>
+        Copyright Владислав
+    </footer>
+</body>
+</html>
